@@ -1,1 +1,7 @@
-import Image from "next/image";
+export default function Home() {
+  return (
+    <div>
+      <h1>Loja Virtual</h1>
+    </div>
+  );
+}
