@@ -12,6 +12,12 @@ generator client {
 // prisma/schema.prisma
 datasource db {
   provider  = "postgresql"
-  url  	    = env("DATABASE_URL")
 }
 
+model User {
+  id Int @id @default(autoincrement())
+  externalId String @unique
+  attributes Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
